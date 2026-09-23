@@ -6,7 +6,7 @@ const timerDisplay = document.getElementById("score");
 const startBtn = document.getElementById("btn-start");
 
 let seconds=0;
-let timerInterval=null;
+let startTime = null;
 let gameAnimationId = null;
 let isRunning = false;
 
@@ -54,6 +54,13 @@ function drawBall() {
  */
 function startGame(){
     timerDisplay.textContent = "Score : 0 s";
+    seconds=0
+
+    if (gameAnimationId) {
+        cancelAnimationFrame(gameAnimationId);
+    }
+
+    ball.speed = 4;
 
     paddle.x = (board.width - paddle.width) / 2;
     paddle.y = board.height - paddle.height - 5;
@@ -127,6 +134,7 @@ function gameLoop() {
     ctx.clearRect(0, 0, board.width, board.height);
 
     update();
+    updateTimer();
     drawPaddle();
     drawBall();
 
@@ -138,13 +146,14 @@ function gameLoop() {
  */
 function gameOver() {
     isRunning = false;
-    clearInterval(timerInterval);
     timerDisplay.textContent = `Score : ${seconds} s`;
     cancelAnimationFrame(gameAnimationId);
+
 
     const bestScore = localStorage.getItem("soloPong_bestScore") || 0;
     if (seconds > bestScore) {
         localStorage.setItem("soloPong_bestScore", seconds);
+        console.log("localStorage mis a jour"+seconds);
     }
 
     ctx.fillStyle = "rgba(0, 0, 0, 0.75)";
@@ -159,10 +168,22 @@ function gameOver() {
 }
 
 function startTimer(){
-    timerInterval = setInterval(()=>{
-        seconds++;
+    startTime = performance.now(); // Temps de départ précis en millisecondes
+    seconds = 0;
+    timerDisplay.textContent = `Score : ${seconds} s`;
+}
+
+function updateTimer() {
+    if (!isRunning || !startTime) return;
+
+    const elapsedTime = performance.now() - startTime;
+
+    const currentSeconds = Math.floor(elapsedTime / 1000);
+
+    if (currentSeconds !== seconds) {
+        seconds = currentSeconds;
         timerDisplay.textContent = `Score : ${seconds} s`;
-    },1000)
+    }
 }
 
 startBtn.addEventListener("click", () => {

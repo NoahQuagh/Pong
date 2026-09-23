@@ -18,13 +18,11 @@ export function setupControls(paddle) {
 
     if (btnLeft && btnRight) {
         btnLeft.addEventListener("touchstart", (e) => {
-            e.preventDefault();
             paddle.dx = -paddle.speed;
         });
         btnLeft.addEventListener("touchend", () => paddle.dx = 0);
 
         btnRight.addEventListener("touchstart", (e) => {
-            e.preventDefault();
             paddle.dx = paddle.speed;
         });
         btnRight.addEventListener("touchend", () => paddle.dx = 0);
