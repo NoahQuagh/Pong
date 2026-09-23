@@ -21,6 +21,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: var(--space-xl);
+    height: 100vh;
     color: var(--color-second-primary);
 }
 
@@ -48,7 +49,7 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: var(--space-base);
+    gap: var(--space-5xl);
     button{
         border-radius: var(--radiusBox-circle);
         padding: var(--space-xs);

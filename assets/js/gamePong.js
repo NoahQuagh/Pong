@@ -153,7 +153,6 @@ function gameOver() {
     const bestScore = localStorage.getItem("soloPong_bestScore") || 0;
     if (seconds > bestScore) {
         localStorage.setItem("soloPong_bestScore", seconds);
-        console.log("localStorage mis a jour"+seconds);
     }
 
     ctx.fillStyle = "rgba(0, 0, 0, 0.75)";
