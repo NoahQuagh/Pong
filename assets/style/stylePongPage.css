@@ -1,0 +1,69 @@
+body{
+    font-family: var(--font-text);
+}
+
+header{
+    background-color: var(--color-main-primary);
+    color: var(--color-second-primary);
+    height: 5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-second-tertiary);
+}
+
+main{
+    background:var(--color-main-tertiary);
+    padding:var(--space-3xl) ;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    color: var(--color-second-primary);
+}
+
+footer{
+    border-top: 1px solid var(--color-second-tertiary);
+    height: 7rem;
+    color: var(--color-second-primary);
+    background-color:var(--color-main-primary);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-zone{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.control-btn-zone{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-base);
+    button{
+        border-radius: var(--radiusBox-circle);
+        padding: var(--space-xs);
+    }
+}
+
+button{
+    background-color: var(--color-main-primary);
+    border: 1px solid var(--color-second-tertiary);
+    padding: var(--space-xxs) var(--space-xs);
+    color: var(--color-second-primary);
+    font-family: var(--font-text);
+    font-size: var(--text-base);
+    border-radius: var(--radiusBox-sm);
+    &:hover{
+        background-color: var(--color-main-quaternary);
+    }
+}

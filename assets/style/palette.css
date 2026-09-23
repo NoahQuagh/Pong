@@ -1,0 +1,84 @@
+:root{
+    --color-second-primary: #f2ede6;
+    --color-second-secondary: #ffffff;
+    --color-second-tertiary: #7a7168;
+    --color-second-quaternary: #575350;
+
+    --paper: #dfded6;
+    --paper-hover: #cccbc4;
+    --paper-border: #bdbdb6;
+
+    --gray: #8b949e;
+
+    --color-main-primary: #0e0d0c;
+    --color-main-secondary: #131313;
+    --color-main-tertiary: #1a1917;
+    --color-main-quaternary: #252320;
+
+    --accent: #226db8;
+    --accent-second: #123f6a;
+}
+
+
+
+
+:root{
+    /*taille de texte*/
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+    --text-5xl: 5rem;
+
+    /*marge de texte*/
+    --space-3xs: 0.2rem;
+    --space-xxs: 0.5rem;
+    --space-xs: 0.75rem;
+    --space-sm: 0.875rem;
+    --space-base: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.5rem;
+    --space-3xl: 3rem;
+    --space-4xl: 3.5rem;
+    --space-5xl: 4rem;
+}
+
+:root {
+    --font-text: 'DM Sans', sans-serif;
+}
+
+:root {
+    --radiusBox-xs: 6px;
+    --radiusBox-sm: 7px;
+    --radiusBox-xxs: 4px;
+    --radiusBox-md: 14px;
+    --radiusBox-circle: 25px;
+    --radiusBox-full: 100%;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    transition: background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.15s ease;
+}
+
+a{
+    text-decoration: none;
+}

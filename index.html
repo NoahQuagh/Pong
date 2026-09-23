@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong</title>
+    <link rel="stylesheet" href="assets/style/stylePongGame.css">
+    <link rel="stylesheet" href="assets/style/stylePongPage.css">
+    <link rel="stylesheet" href="assets/style/palette.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+    <h1><i class="ti ti-ping-pong"></i>Pong</h1>
+</header>
+
+<main>
+    <canvas id="canvas" width="400" height="500"></canvas>
+
+    <div class="control-zone">
+        <button id="btn-start" aria-label="nouvelle partie">Nouvelle partie</button>
+        <div id="score"></div>
+        <div class="control-btn-zone">
+            <button id="btn-left" aria-label="gauche"><i class="ti ti-arrow-narrow-left"></i></button>
+            <button id="btn-right" aria-label="droite"><i class="ti ti-arrow-narrow-right"></i></button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Projet individuel Javascript pour le BUT informatique 2ᵉ années</p>
+</footer>
+<script type="module" src="assets/js/gamePong.js"></script>
+<script src="assets/js/utils/toolBox.js" defer></script>
+</body>
+</html>
